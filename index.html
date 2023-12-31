@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Display</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Import Products</h1>
+
+    <div class="step">
+      <label for="fileInput">Step 1: Select File</label>
+      <input type="file" id="fileInput">
+    </div>
+
+    <div class="step">
+      <label for="fileType">Step 2: Specify Format</label>
+      <select id="fileType">
+        <option value="csv">CSV</option>
+        <option value="json">JSON</option>
+      </select>
+      <!-- Add other format specifications here -->
+    </div>
+
+    <div class="step">
+      <h2>Step 3: Display Handling</h2>
+      <div class="field-selection">
+        <div class="available-fields">
+          <label for="availableFields">Available Fields</label>
+          <select id="availableFields" multiple size="4">
+            <option value="Subcategory">Subcategory</option>
+            <option value="Title">Title</option>
+            <option value="Price">Price</option>
+            <option value="Popularity">Popularity</option>
+          </select>
+        </div>
+        <div class="field-buttons">
+          <button id="addField">&gt;&gt;</button>
+          <button id="removeField">&lt;&lt;</button>
+        </div>
+        <div class="displayed-fields">
+          <label for="displayedFields">Field to be Displayed</label>
+          <select id="displayedFields" multiple size="4">
+            <!-- Selected fields will be displayed here -->
+          </select>
+        </div>
+      </div>
+      <div class="navigation-buttons">
+        <button id="cancelButton">Cancel</button>
+        <button id="nextButton">Next</button>
+      </div>
+    </div>
+
+    <table id="productTable">
+      <thead>
+        <tr>
+          <!-- Table headers will be populated dynamically -->
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Table data will be populated dynamically -->
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
